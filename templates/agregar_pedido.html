@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Agregar Pedido{% endblock %}
+
+{% block content %}
+<h2>Agregar Pedido</h2>
+<form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Agregar</button>
+</form>
+{% endblock %}

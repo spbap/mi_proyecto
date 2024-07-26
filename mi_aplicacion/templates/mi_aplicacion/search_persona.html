@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Buscar Persona</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+    <h1>Buscar Persona</h1>
+    <form method="get" action="{% url 'search_persona' %}">
+        {{ form.as_p }}
+        <button type="submit">Buscar</button>
+    </form>
+
+    {% if personas %}
+        <h2>Resultados de búsqueda:</h2>
+        <ul>
+            {% for persona in personas %}
+                <li>{{ persona.nombre }} - {{ persona.edad }} años - {{ persona.sexo }}</li>
+            {% endfor %}
+        </ul>
+    {% elif request.GET %}
+        <p>No se encontraron resultados.</p>
+    {% endif %}
+</body>
+</html>
