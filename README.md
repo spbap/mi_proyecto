@@ -16,7 +16,7 @@ Este es un proyecto de ejemplo creado con Django. El proyecto incluye modelos b√
 ## Requisitos
 
 - Python 3.12.4
-- Django 5.0.7 
+- Django 5.0.7
 
 ## Configuraci√≥n del Entorno
 
