@@ -10,13 +10,13 @@ environ.Env.read_env()  # Lee el archivo .env
 BASE_DIR = Path(__file__).resolve().parent.parent
 
 # Clave secreta para la seguridad del proyecto.
-SECRET_KEY = env('j5w$&t(h0924-jhzd&y-bwq4lr78wg2rsz%lhk7$&y+_4t(')
+SECRET_KEY = env('DJANGO_SECRET_KEY', default='mi_clave_secreta')
 
 # Configuración de modo debug.
 DEBUG = env.bool('DEBUG', default=False)
 
 # Definir los hosts permitidos.
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = env.list('ALLOWED_HOSTS', default=['127.0.0.1', 'localhost'])
 
 # Aplicaciones instaladas en el proyecto.
 INSTALLED_APPS = [
@@ -26,7 +26,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'mi_aplicacion',  
+    'mi_aplicacion',
 ]
 
 # Middleware de seguridad y funcionalidad.
@@ -41,7 +41,7 @@ MIDDLEWARE = [
 ]
 
 # Configuración de las URLs raíz del proyecto.
-ROOT_URLCONF = 'mi_proyecto.urls'  
+ROOT_URLCONF = 'mi_proyecto.urls'
 
 # Configuración de las plantillas HTML.
 TEMPLATES = [
@@ -61,7 +61,7 @@ TEMPLATES = [
 ]
 
 # Configuración del WSGI para la aplicación.
-WSGI_APPLICATION = 'mi_proyecto.wsgi.application'  
+WSGI_APPLICATION = 'mi_proyecto.wsgi.application'
 
 # Configuración de la base de datos.
 DATABASES = {
