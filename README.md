@@ -15,14 +15,13 @@ Este es un proyecto de ejemplo creado con Django. El proyecto incluye modelos b�
 
 ## Requisitos
 
-- Python 3.x
-- Django 4.x (o la versión que estés utilizando)
+- Python 3.12.4
+- Django 5.0.7 
 
 ## Configuración del Entorno
 
 1. **Clona el Repositorio**
 
    ```bash
-   git clone https://github.com/tu_usuario/tu_repositorio.git
-   cd tu_repositorio
-
+   git clone https://github.com/spbap/mi_proyecto.git
+   cd mi_proyecto
